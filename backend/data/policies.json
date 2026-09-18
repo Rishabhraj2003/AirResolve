@@ -1,0 +1,45 @@
+{
+  "cancellation": {
+    "rebooking": "Customer is entitled to rebook on the next available flight within 24 hours at no charge.",
+    "refund": "Customer may choose a full refund.",
+    "refund_processing": "Refunds for airline-caused cancellations are processed within 7 business days."
+  },
+
+  "delay": {
+    "under_3_hours": {
+      "meal_voucher": 500,
+      "lounge_access": false,
+      "hotel": false
+    },
+
+    "3_to_5_hours": {
+      "meal_voucher": 1500,
+      "lounge_access": true,
+      "hotel": false
+    },
+
+    "over_5_hours": {
+      "meal_voucher": 2000,
+      "lounge_access": true,
+      "hotel": true,
+      "hotel_scope": "Delayed hours only, not the entire night"
+    }
+  },
+
+  "fare_difference": {
+    "rule": "Customers choosing a higher-fare flight voluntarily must pay the fare difference."
+  },
+
+  "loyalty": {
+    "Gold": "Priority rebooking / first access to next-available seats. No additional compensation beyond standard policy.",
+    "Platinum": "Priority rebooking / first access to next-available seats. No additional compensation beyond standard policy."
+  },
+
+  "prohibited_actions": [
+    "Approving compensation beyond the stated policy amounts",
+    "Waiving a fare difference above ₹1,500",
+    "Handling compensation requests for missed flights",
+    "Handling threats of legal action or formal complaints",
+    "Processing refunds using a payment method different from the original"
+  ]
+}

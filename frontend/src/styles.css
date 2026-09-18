@@ -1,0 +1,1176 @@
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+
+:root {
+  font-family:
+    Inter,
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  color: #172033;
+
+  background: #f4f6fa;
+}
+
+
+body {
+  min-width: 1180px;
+  background: #f4f6fa;
+}
+
+
+/* =========================================================
+   APP
+========================================================= */
+
+.app {
+  min-height: 100vh;
+  background: #f4f6fa;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.topbar {
+  height: 76px;
+
+  background: #ffffff;
+
+  border-bottom:
+    1px solid #e7eaf0;
+
+  padding:
+    0 28px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+}
+
+
+.brand {
+  font-size: 23px;
+
+  font-weight: 800;
+
+  letter-spacing: -0.5px;
+}
+
+
+.brandSubtitle {
+  margin-top: 4px;
+
+  color: #7c8493;
+
+  font-size: 12px;
+}
+
+
+.systemBadge {
+  display: flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  padding:
+    9px 13px;
+
+  border:
+    1px solid #d7eddf;
+
+  border-radius: 999px;
+
+  color: #217847;
+
+  background: #f0faf3;
+
+  font-size: 11px;
+
+  font-weight: 700;
+}
+
+
+.statusDot {
+  width: 7px;
+
+  height: 7px;
+
+  border-radius: 50%;
+
+  background: #2eaf64;
+
+  display: inline-block;
+}
+
+
+/* =========================================================
+   MAIN LAYOUT
+========================================================= */
+
+.appBody {
+  max-width: 1600px;
+
+  margin: 0 auto;
+
+  padding:
+    18px;
+
+  display: grid;
+
+  grid-template-columns:
+    245px
+    minmax(500px, 1fr)
+    350px;
+
+  gap: 18px;
+}
+
+
+/* =========================================================
+   LEFT SIDEBAR
+========================================================= */
+
+.sidebar {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 10px;
+}
+
+
+.sectionHeading {
+  color: #79818f;
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.1em;
+
+  padding:
+    5px 4px;
+}
+
+
+.scenarioList {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 9px;
+}
+
+
+.scenarioCard {
+  text-align: left;
+
+  width: 100%;
+
+  background: #ffffff;
+
+  border:
+    1px solid #e1e5ec;
+
+  border-radius: 13px;
+
+  padding: 13px;
+
+  cursor: pointer;
+
+  transition:
+    border-color 0.15s ease,
+    box-shadow 0.15s ease,
+    transform 0.15s ease;
+}
+
+
+.scenarioCard:hover {
+  border-color: #9483ea;
+
+  transform: translateY(-1px);
+}
+
+
+.scenarioActive {
+  border-color: #7662db;
+
+  box-shadow:
+    0 8px 24px
+    rgba(73, 55, 170, 0.1);
+}
+
+
+.scenarioTop {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 8px;
+}
+
+
+.scenarioName {
+  font-size: 13px;
+
+  font-weight: 800;
+}
+
+
+.scenarioFlight {
+  color: #353f52;
+
+  margin-top: 9px;
+
+  font-size: 11px;
+
+  font-weight: 700;
+}
+
+
+.scenarioRoute {
+  color: #818a99;
+
+  margin-top: 3px;
+
+  font-size: 10px;
+}
+
+
+.statusText {
+  margin-top: 10px;
+
+  font-size: 10px;
+
+  font-weight: 700;
+}
+
+
+.cancelledText {
+  color: #b35757;
+}
+
+
+.delayedText {
+  color: #a06a13;
+}
+
+
+/* =========================================================
+   TIERS
+========================================================= */
+
+.tierBadge {
+  display: inline-flex;
+
+  align-items: center;
+
+  padding:
+    4px 7px;
+
+  border-radius: 999px;
+
+  font-size: 9px;
+
+  font-weight: 800;
+}
+
+
+.large {
+  margin-top: 5px;
+
+  font-size: 9px;
+}
+
+
+.tier-gold {
+  color: #8b6914;
+
+  background: #fff8df;
+}
+
+
+.tier-silver {
+  color: #5e6878;
+
+  background: #f0f2f5;
+}
+
+
+.tier-platinum {
+  color: #59499f;
+
+  background: #f0edff;
+}
+
+
+/* =========================================================
+   WORKFLOW CARD
+========================================================= */
+
+.architectureCard {
+  margin-top: 8px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #1f2740,
+      #2c3550
+    );
+
+  color: white;
+
+  border-radius: 14px;
+
+  padding: 16px;
+}
+
+
+.cardSmallTitle {
+  font-size: 9px;
+
+  letter-spacing: 0.1em;
+
+  color: #acb6ca;
+
+  font-weight: 800;
+}
+
+
+.workflowStep {
+  margin-top: 11px;
+
+  font-size: 10px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+}
+
+
+.workflowStep span {
+  width: 18px;
+
+  height: 18px;
+
+  border-radius: 5px;
+
+  display: grid;
+
+  place-items: center;
+
+  background: rgba(255, 255, 255, 0.12);
+
+  color: #ccd5e8;
+
+  font-size: 8px;
+
+  font-weight: 800;
+}
+
+
+.workflowArrow {
+  color: #77829b;
+
+  margin-left: 7px;
+
+  font-size: 11px;
+}
+
+
+/* =========================================================
+   CHAT PANEL
+========================================================= */
+
+.chatPanel {
+  min-height: calc(100vh - 112px);
+
+  height: calc(100vh - 112px);
+
+  background: white;
+
+  border:
+    1px solid #e1e5ec;
+
+  border-radius: 16px;
+
+  overflow: hidden;
+
+  display: flex;
+
+  flex-direction: column;
+}
+
+
+.chatHeader {
+  padding:
+    17px 19px;
+
+  border-bottom:
+    1px solid #edf0f4;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+}
+
+
+.chatTitle {
+  font-size: 14px;
+
+  font-weight: 800;
+}
+
+
+.chatSubtitle {
+  margin-top: 4px;
+
+  color: #7d8695;
+
+  font-size: 10px;
+}
+
+
+.conversationBadge {
+  border:
+    1px solid #e5e0ff;
+
+  color: #6252bb;
+
+  background: #f6f4ff;
+
+  padding:
+    7px 9px;
+
+  border-radius: 8px;
+
+  font-size: 9px;
+
+  font-weight: 800;
+}
+
+
+/* =========================================================
+   MESSAGES
+========================================================= */
+
+.messageArea {
+  flex: 1;
+
+  overflow-y: auto;
+
+  padding: 23px;
+
+  background: #fafbfd;
+}
+
+
+.welcomeState {
+  height: 100%;
+
+  min-height: 400px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  align-items: center;
+
+  text-align: center;
+}
+
+
+.welcomeIcon {
+  width: 48px;
+
+  height: 48px;
+
+  display: grid;
+
+  place-items: center;
+
+  border-radius: 15px;
+
+  background: #f0edff;
+
+  color: #6652d1;
+
+  font-size: 23px;
+}
+
+
+.welcomeState h2 {
+  font-size: 20px;
+
+  margin:
+    16px 0 7px;
+}
+
+
+.welcomeState p {
+  max-width: 400px;
+
+  color: #7e8796;
+
+  font-size: 11px;
+
+  line-height: 1.6;
+
+  margin-bottom: 20px;
+}
+
+
+.messageRow {
+  display: flex;
+
+  flex-direction: column;
+
+  margin-bottom: 18px;
+}
+
+
+.messageRow.user {
+  align-items: flex-end;
+}
+
+
+.messageRow.agent {
+  align-items: flex-start;
+}
+
+
+.messageSender {
+  color: #9299a7;
+
+  font-size: 8px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.08em;
+
+  margin-bottom: 5px;
+}
+
+
+.messageBubble {
+  max-width: 76%;
+
+  padding:
+    12px 14px;
+
+  border-radius: 14px;
+
+  font-size: 12px;
+
+  line-height: 1.6;
+
+  white-space: pre-line;
+}
+
+
+.messageRow.user
+.messageBubble {
+  background: #273148;
+
+  color: white;
+
+  border-bottom-right-radius: 4px;
+}
+
+
+.messageRow.agent
+.messageBubble {
+  background: white;
+
+  border:
+    1px solid #e2e6ed;
+
+  color: #313a4c;
+
+  border-bottom-left-radius: 4px;
+}
+
+
+.loadingBubble {
+  color: #7c8594;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 5px;
+}
+
+
+.loadingDot {
+  width: 5px;
+
+  height: 5px;
+
+  border-radius: 50%;
+
+  background: #8a80c8;
+
+  animation: pulse 1.2s infinite;
+}
+
+
+.loadingDot:nth-child(2) {
+  animation-delay: 0.15s;
+}
+
+
+.loadingDot:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+
+@keyframes pulse {
+
+  0%,
+  100% {
+    opacity: 0.3;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+}
+
+
+/* =========================================================
+   COMPOSER
+========================================================= */
+
+.composer {
+  border-top:
+    1px solid #edf0f4;
+
+  padding:
+    12px;
+
+  display: flex;
+
+  gap: 9px;
+
+  align-items: flex-end;
+}
+
+
+.composer textarea {
+  flex: 1;
+
+  resize: none;
+
+  border:
+    1px solid #dde2e9;
+
+  border-radius: 11px;
+
+  padding:
+    11px 12px;
+
+  min-height: 45px;
+
+  outline: none;
+
+  color: #283145;
+
+  font-size: 12px;
+}
+
+
+.composer textarea:focus {
+  border-color: #7966de;
+
+  box-shadow:
+    0 0 0 3px
+    rgba(121, 102, 222, 0.08);
+}
+
+
+.primaryButton {
+  border: 0;
+
+  background: #6853dd;
+
+  color: white;
+
+  border-radius: 10px;
+
+  padding:
+    10px 14px;
+
+  cursor: pointer;
+
+  font-size: 11px;
+
+  font-weight: 800;
+}
+
+
+.primaryButton:hover {
+  background: #5845c8;
+}
+
+
+.primaryButton:disabled {
+  opacity: 0.45;
+
+  cursor: not-allowed;
+}
+
+
+.sendButton {
+  min-height: 45px;
+}
+
+
+/* =========================================================
+   RIGHT SIDE
+========================================================= */
+
+.rightPanel {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 12px;
+}
+
+
+.card {
+  background: white;
+
+  border:
+    1px solid #e1e5ec;
+
+  border-radius: 15px;
+
+  padding: 15px;
+
+  box-shadow:
+    0 4px 16px
+    rgba(30, 40, 60, 0.03);
+}
+
+
+.cardHeader {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  margin-bottom: 12px;
+}
+
+
+.cardTitle {
+  color: #798291;
+
+  font-size: 9px;
+
+  font-weight: 900;
+
+  letter-spacing: 0.09em;
+}
+
+
+/* =========================================================
+   CUSTOMER
+========================================================= */
+
+.customerHeader {
+  display: flex;
+
+  gap: 11px;
+
+  align-items: center;
+}
+
+
+.customerAvatar {
+  width: 38px;
+
+  height: 38px;
+
+  border-radius: 11px;
+
+  display: grid;
+
+  place-items: center;
+
+  background: #ece9ff;
+
+  color: #5d4dc4;
+
+  font-weight: 900;
+
+  font-size: 12px;
+}
+
+
+.customerName {
+  font-size: 15px;
+
+  font-weight: 800;
+}
+
+
+.infoGrid {
+  display: grid;
+
+  grid-template-columns:
+    1fr 1fr;
+
+  gap: 12px;
+
+  margin-top: 17px;
+}
+
+
+.infoItem {
+  min-width: 0;
+}
+
+
+.infoLabel {
+  color: #929aa8;
+
+  font-size: 8px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.07em;
+}
+
+
+.infoValue {
+  margin-top: 4px;
+
+  color: #343d4f;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  word-break: break-word;
+}
+
+
+.contactBlock,
+.historyBlock {
+  border-top:
+    1px solid #eff1f4;
+
+  margin-top: 13px;
+
+  padding-top: 12px;
+}
+
+
+.contactValue,
+.historyValue {
+  margin-top: 4px;
+
+  color: #5f6878;
+
+  font-size: 9px;
+
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   DECISION
+========================================================= */
+
+.decisionBadge {
+  display: flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  padding:
+    8px 9px;
+
+  border-radius: 8px;
+
+  font-size: 9px;
+
+  font-weight: 900;
+
+  text-transform: uppercase;
+}
+
+
+.decisionResolved {
+  color: #247446;
+
+  background: #edf9f1;
+}
+
+
+.decisionEscalated {
+  color: #996100;
+
+  background: #fff7e7;
+}
+
+
+.decisionSection {
+  margin-top: 14px;
+}
+
+
+.sectionLabel {
+  color: #8e96a4;
+
+  font-size: 8px;
+
+  font-weight: 900;
+
+  letter-spacing: 0.08em;
+
+  margin-bottom: 7px;
+}
+
+
+.escalationLabel {
+  color: #a86a10;
+}
+
+
+.actionItem,
+.escalationItem {
+  display: flex;
+
+  gap: 7px;
+
+  align-items: flex-start;
+
+  padding:
+    8px 9px;
+
+  border-radius: 8px;
+
+  margin-top: 5px;
+
+  font-size: 9px;
+
+  line-height: 1.45;
+}
+
+
+.actionItem {
+  color: #2f6847;
+
+  background: #f0faf4;
+}
+
+
+.actionIcon {
+  font-weight: 900;
+}
+
+
+.escalationItem {
+  color: #865700;
+
+  background: #fff8eb;
+}
+
+
+.escalationIcon {
+  font-weight: 900;
+}
+
+
+/* =========================================================
+   SOURCES
+========================================================= */
+
+.sourceList {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 6px;
+}
+
+
+.sourceChip {
+  display: flex;
+
+  align-items: center;
+
+  gap: 5px;
+
+  background: #f7f8fa;
+
+  border:
+    1px solid #e6e8ed;
+
+  padding:
+    6px 8px;
+
+  border-radius: 7px;
+
+  font-size: 8px;
+
+  color: #657080;
+}
+
+
+.sourceChip span {
+  color: #36915b;
+
+  font-weight: 900;
+}
+
+
+/* =========================================================
+   AUDIT
+========================================================= */
+
+.auditList {
+  display: flex;
+
+  flex-direction: column;
+}
+
+
+.auditItem {
+  display: flex;
+
+  gap: 9px;
+
+  padding:
+    9px 0;
+
+  border-bottom:
+    1px solid #eff1f4;
+}
+
+
+.auditItem:last-child {
+  border-bottom: 0;
+}
+
+
+.auditIcon {
+  width: 22px;
+
+  height: 22px;
+
+  border-radius: 7px;
+
+  display: grid;
+
+  place-items: center;
+
+  background: #f0f2f6;
+
+  font-size: 9px;
+}
+
+
+.auditContent {
+  flex: 1;
+}
+
+
+.auditTitle {
+  color: #455064;
+
+  font-size: 9px;
+
+  font-weight: 700;
+
+  line-height: 1.45;
+}
+
+
+.auditTime {
+  color: #a0a6b1;
+
+  font-size: 8px;
+
+  margin-top: 3px;
+}
+
+
+.emptyState {
+  color: #9aa1ae;
+
+  font-size: 10px;
+
+  line-height: 1.5;
+
+  padding:
+    6px 0;
+}
+
+
+/* =========================================================
+   BACKEND STATUS
+========================================================= */
+
+.backendStatus {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 6px;
+
+  padding:
+    8px;
+
+  border-radius: 8px;
+
+  font-size: 9px;
+
+  font-weight: 800;
+}
+
+
+.backendStatus.online {
+  background: #edf9f1;
+
+  color: #297549;
+}
+
+
+.backendStatus.offline {
+  background: #fff0f0;
+
+  color: #a54444;
+}

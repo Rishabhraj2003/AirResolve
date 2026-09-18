@@ -1,0 +1,23 @@
+[
+  {
+    "name": "Priya Nair",
+    "tier": "Gold",
+    "pnr": "SK4821X",
+    "email": "priya.nair@example.com",
+    "travel_history": "6 flights in the last 12 months, 1 prior complaint"
+  },
+  {
+    "name": "Arvind Kulkarni",
+    "tier": "Silver",
+    "pnr": "TR1190B",
+    "email": "arvind.k@example.com",
+    "travel_history": "3 flights in the last 12 months, no prior complaints"
+  },
+  {
+    "name": "Meher Kaur",
+    "tier": "Platinum",
+    "pnr": "WL7742",
+    "email": "meher.kaur@example.com",
+    "travel_history": "7 flights in the last 12 months, 1 prior complaint"
+  }
+]
